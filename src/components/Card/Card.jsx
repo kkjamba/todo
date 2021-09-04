@@ -17,7 +17,6 @@ const Card = ({card, remove, toggleCheckedCard}) => {
             </Modal>
             <div className={cl.cardActions}>
                 <input onClick={() => toggleCheckedCard(card.id)} type="checkbox" defaultChecked={card.completed}/>
-                {/*<svg onClick={() => remove(card)}>*/}
                 <svg onClick={card.completed ? () => remove(card) : () => setModalActive(true)}>
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
