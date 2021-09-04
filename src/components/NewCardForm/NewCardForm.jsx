@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import cl from "./NewCardForm.module.css";
+import Input from "../UI/Input/Input";
+import Button from "../UI/Button/Button";
 
 const NewCardForm = ({add}) => {
     const [card, setNewCard] = useState({text: ''})
@@ -18,15 +20,15 @@ const NewCardForm = ({add}) => {
 
     return (
         <form className={cl.newCard}>
-            <input
+            <Input
                 type="text"
                 placeholder="Введите новую задачу"
                 value={card.text}
                 onChange={e => setNewCard({...card, text: e.target.value})}
             />
-            <button onClick={addNewCard}>
+            <Button onClick={addNewCard}>
                 <h4>Добавить</h4>
-            </button>
+            </Button>
         </form>
     );
 };

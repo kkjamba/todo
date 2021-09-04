@@ -1,7 +1,7 @@
 import './App.css';
 import List from "./components/List/List";
 import React, {useState} from "react";
-import NewCardForm from "./components/UI/NewCardForm/NewCardForm";
+import NewCardForm from "./components/NewCardForm/NewCardForm";
 
 function App() {
     const [cards, setCards] = useState([

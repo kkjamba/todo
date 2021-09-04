@@ -12,8 +12,10 @@ const Card = ({card, remove, toggleCheckedCard}) => {
             <Modal active={modalActive} setActive={setModalActive}>
                 <h3>Задача еще не выполнена!</h3>
                 <h3>Вы уверены, что хотите удалить ее?</h3>
-                <Button onClick={() => remove(card)}>Удалить</Button>
-                <Button red onClick={() => setModalActive(false)}>Отмена</Button>
+                <div className={cl.buttonGroup}>
+                    <Button onClick={() => remove(card)}>Удалить</Button>
+                    <Button red onClick={() => setModalActive(false)}>Отмена</Button>
+                </div>
             </Modal>
             <div className={cl.cardActions}>
                 <input onClick={() => toggleCheckedCard(card.id)} type="checkbox" defaultChecked={card.completed}/>

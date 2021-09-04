@@ -1,0 +1,11 @@
+.newCard {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.newCard input {
+    margin-right: 5px;
+}
